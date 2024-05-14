@@ -1,0 +1,71 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Include the common styles -->
+    <link rel="stylesheet" href="styles.css"> <!-- Include the signup-specific styles -->
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" action="/signup" method="POST">
+            <div class="form-row">
+                <div class="half-width">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="half-width">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="half-width">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="half-width">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="half-width">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" name="signupUsername" required>
+                </div>
+                <div class="half-width">
+                    <label for="contactNo">Contact No:</label>
+                    <input type="tel" id="contactNo" name="contactNo" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="half-width">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                </div>
+                <div class="half-width">
+                    <label for="reenterPassword">Re-enter Password:</label>
+                    <input type="password" id="reenterPassword" name="reenterPassword" required>
+                </div>
+            </div>
+
+            <!-- Corrected function name -->
+            <button class="submit" type="submit">Sign Up</button>
+        </form>
+        <p id="signupErrorMessage" class="error-message"></p>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
